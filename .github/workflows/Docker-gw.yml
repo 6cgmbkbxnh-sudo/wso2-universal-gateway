@@ -84,7 +84,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           flavor: |
-              suffix=-build$BUILD_NUMBER,onlatest=true
+              suffix=-build${{ env.BUILD_NUMBER }},onlatest=true
           #tags: |
           #  # Set tags based on the Git ref (e.g., v1.0.0, 1.0, 1, latest)
           #  type=semver,pattern={{version}}
