@@ -47,7 +47,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Use the custom build number
-        run: echo "The custom build number is $BUILD_NUMBER
+        run: echo "The custom build number is $BUILD_NUMBER"
         
       - name: Checkout repository
         uses: actions/checkout@v4
