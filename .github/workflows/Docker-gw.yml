@@ -41,8 +41,14 @@ jobs:
       # This is used to complete the identity challenge
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
-
     steps:
+      - name: Generate custom build number
+        uses: einaregilsson/build-number@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Use the custom build number
+        run: echo "The custom build number is $BUILD_NUMBER
+        
       - name: Checkout repository
         uses: actions/checkout@v4
 
